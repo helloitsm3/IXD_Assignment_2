@@ -47,6 +47,6 @@ Temporary Items
 .apdisk
 
 # Unity Ignore Files
-/Library/
-/Temp/
-/Build/
+Library/
+Temp/
+Build/
