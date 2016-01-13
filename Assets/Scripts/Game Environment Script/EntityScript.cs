@@ -11,14 +11,12 @@ public class EntityScript : MonoBehaviour {
     private float angle;
     private Vector3 enemyToPlayer;
     private GameObject enemy;
-    private bool PlayerRespawn;
     
     void Start()
     {
         this.health = maxHealth;
         this.body = this.GetComponent<Rigidbody2D>();
         this.player = GameObject.FindGameObjectWithTag("Player").transform;
-        this.PlayerRespawn = false;
     }
 
     void Update()
