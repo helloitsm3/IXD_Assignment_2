@@ -26,6 +26,16 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
         joystickImg = transform.GetChild(0).GetComponent<Image>();
     }
 
+    private void Update()
+    {
+        playerAngle = joystickImg.rectTransform.anchoredPosition.x;
+    }
+
+    public float RotatePlayer()
+    {
+        return playerAngle;
+    }
+
     public virtual void OnDrag(PointerEventData ped)
     {
         Vector2 pos;
@@ -73,10 +83,5 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
             return inputVector.z;
         else
             return Input.GetAxis("Vertical");
-    }
-
-    public float RotatePlayer()
-    {
-        return playerAngle;
     }
 }

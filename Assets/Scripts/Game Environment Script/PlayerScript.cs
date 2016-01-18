@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour {
     public bool androidInput;
@@ -32,8 +33,11 @@ public class PlayerScript : MonoBehaviour {
         {
             this.input.Set(moveJoystick.Horizontal(), moveJoystick.Vertical(), 0);
 
-            Quaternion eulerRot = Quaternion.Euler(0.0f, 0.0f, lookJoystick.GetComponentInChildren<VirtualJoystick>().transform.position.x);
-            this.transform.rotation = Quaternion.Slerp(transform.rotation, eulerRot, Time.deltaTime * 10);
+            //Quaternion eulerRot = Quaternion.Euler(0.0f, 0.0f, lookJoystick.GetComponentInChildren<VirtualJoystick>().transform.position.x);
+            //this.transform.rotation = Quaternion.Slerp(transform.rotation, eulerRot, Time.deltaTime * 10);
+            this.transform.Rotate(0f, 0f, -lookJoystick.RotatePlayer() * Time.deltaTime);
+
+            Debug.Log("Transform: " + lookJoystick.RotatePlayer());
         }
         else
         {
