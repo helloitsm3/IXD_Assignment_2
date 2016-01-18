@@ -11,7 +11,7 @@ public class EntityScript : MonoBehaviour {
     private float angle;
     private Vector3 enemyToPlayer;
     private GameObject enemy;
-    
+
     void Start()
     {
         this.health = maxHealth;
@@ -44,7 +44,7 @@ public class EntityScript : MonoBehaviour {
     {
         this.health -= amount;
 
-        if(this.health <= 0)
+        if (this.health <= 0)
         {
             this.health = 0;
             this.OnDeath();

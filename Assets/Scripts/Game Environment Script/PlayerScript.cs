@@ -25,7 +25,7 @@ public class PlayerScript : MonoBehaviour {
         this.rigbody = GetComponent<Rigidbody2D>();
         this.input = Vector3.zero;
         this.playerCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-	}
+    }
 
     // Update is called once per frame
     void Update () {
