@@ -25,9 +25,9 @@ public class PlayerScript : MonoBehaviour {
         this.input = Vector3.zero;
         this.playerCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
         if (this.androidInput)
         {
             this.input.Set(moveJoystick.Horizontal(), moveJoystick.Vertical(), 0);
