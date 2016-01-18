@@ -30,7 +30,7 @@ public class EntityScript : MonoBehaviour {
             if (PlayerScript.currentPlayer.playerHealth <= 0)
             {
                 PlayerScript.currentPlayer.OnDeath();
-                Application.LoadLevel(0);
+                Application.LoadLevel(8);
             }
         }
     }
