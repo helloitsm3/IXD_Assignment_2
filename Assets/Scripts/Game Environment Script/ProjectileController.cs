@@ -30,6 +30,7 @@ public abstract class ProjectileController : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D target)
     {
+        Debug.Log("Bullet Destroyed");
         this.OnCollision(target.gameObject);
         Destroy(this.gameObject);
     }
