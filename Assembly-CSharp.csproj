@@ -6,7 +6,7 @@
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
 	<RootNamespace></RootNamespace>
-	<ProjectGuid>{5BB32B74-AA7A-BFEF-FF6C-9B3864DD1D65}</ProjectGuid>
+	<ProjectGuid>{98EBF142-423D-B2B4-62F7-AE76FC3A8439}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<AssemblyName>Assembly-CSharp</AssemblyName>
@@ -48,17 +48,27 @@
      <Compile Include="Assets\Scripts\ButtonInteraction.cs" />
      <Compile Include="Assets\Scripts\ChangeMusic.cs" />
      <Compile Include="Assets\Scripts\DoNotDestroySound.cs" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
+     <Compile Include="Assets\Scripts\Game Environment Script\BulletScript.cs" />
+     <Compile Include="Assets\Scripts\Game Environment Script\EnemySpawner.cs" />
+     <Compile Include="Assets\Scripts\Game Environment Script\EntityScript.cs" />
+     <Compile Include="Assets\Scripts\Game Environment Script\Pistol.cs" />
+     <Compile Include="Assets\Scripts\Game Environment Script\PlayerCamera.cs" />
+     <Compile Include="Assets\Scripts\Game Environment Script\PlayerScript.cs" />
+     <Compile Include="Assets\Scripts\Game Environment Script\ProjectileController.cs" />
+     <Compile Include="Assets\Scripts\Game Environment Script\UIController.cs" />
+     <Compile Include="Assets\Scripts\Game Environment Script\VirtualJoystick.cs" />
+     <Compile Include="Assets\Scripts\Game Environment Script\WeaponController.cs" />
+     <Compile Include="Assets\Scripts\Game Environment Script\WeaponList.cs" />
+     <Compile Include="Assets\Scripts\Highscore Script\DoNotDestroyOnLoad.cs" />
+     <Compile Include="Assets\Scripts\Highscore Script\HighscoreScript.cs" />
+     <Compile Include="Assets\Scripts\Sound Script\GameSound.cs" />
+     <Compile Include="Assets\Scripts\Sound Script\SoundManager.cs" />
+     <Compile Include="Assets\Scripts\SplashScreen.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
