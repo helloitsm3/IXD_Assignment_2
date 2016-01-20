@@ -7,8 +7,8 @@ public abstract class ProjectileController : MonoBehaviour {
     protected Rigidbody2D rigbody;
     protected WeaponController controller;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         this.rigbody = GetComponent<Rigidbody2D>();
         this.rigbody.velocity = this.transform.up * this.projectileSpeed;
         lifetime = 0;

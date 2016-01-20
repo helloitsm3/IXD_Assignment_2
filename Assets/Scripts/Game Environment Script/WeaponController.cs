@@ -6,11 +6,11 @@ public class WeaponController : MonoBehaviour {
     public Transform Spawner;
     public GameObject projectilePrfb;
     public int maxAmmunition;
+    public float coolDownTime;
+    public int damage;
 
     protected int currentAmmunition;
-    protected int damage;
     protected float time;
-    protected float coolDownTime;
 
     void OnEnable()
     {
