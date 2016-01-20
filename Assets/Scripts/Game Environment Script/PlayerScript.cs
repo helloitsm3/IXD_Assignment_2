@@ -35,7 +35,8 @@ public class PlayerScript : MonoBehaviour {
 
             //Quaternion eulerRot = Quaternion.Euler(0.0f, 0.0f, lookJoystick.GetComponentInChildren<VirtualJoystick>().transform.position.x);
             //this.transform.rotation = Quaternion.Slerp(transform.rotation, eulerRot, Time.deltaTime * 10);
-            this.transform.Rotate(0f, 0f, -lookJoystick.RotatePlayer() * Time.deltaTime);
+            //this.transform.Rotate(0f, 0f, -lookJoystick.RotatePlayer() * Time.deltaTime);
+            this.transform.eulerAngles = new Vector3(this.transform.eulerAngles.x, 0, Mathf.Atan2(lookJoystick.joystickImg.rectTransform.anchoredPosition.y, lookJoystick.joystickImg.rectTransform.anchoredPosition.x) * Mathf.Rad2Deg - 90);
         }
         else
         {
@@ -46,7 +47,7 @@ public class PlayerScript : MonoBehaviour {
         }
 
         if (Input.GetKey("backspace"))
-            Application.LoadLevel(5);
+            Application.LoadLevel(6);
 
         UIController.current.PlayerHealthBar(playerHealth);
 	}

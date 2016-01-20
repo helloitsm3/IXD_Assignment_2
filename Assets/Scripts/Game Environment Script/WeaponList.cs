@@ -3,7 +3,6 @@
 public class WeaponList : MonoBehaviour {
     public WeaponController[] weaponsList;
     private int currentWeapon;
-
     ProjectileController projectiles;
 
     // Use this for initialization
@@ -36,9 +35,14 @@ public class WeaponList : MonoBehaviour {
             this.currentWeapon = 3;
             this.SwitchWeapons();
         }
+        else if (Input.GetKeyUp(KeyCode.Alpha5))
+        {
+            this.currentWeapon = 4;
+            this.SwitchWeapons();
+        }
     }
 
-    void SwitchWeapons()
+    public void SwitchWeapons()
     {
         for (int i = 0; i < this.weaponsList.Length; i++)
         {

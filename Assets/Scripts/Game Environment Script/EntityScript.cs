@@ -59,7 +59,12 @@ public class EntityScript : MonoBehaviour {
     {
         if (col.gameObject.tag == "Player")
         {
+            PlayerScript.currentPlayer.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
             PlayerScript.currentPlayer.playerHealth -= damage;
+        }
+        else
+        {
+            PlayerScript.currentPlayer.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
         }
     }
 

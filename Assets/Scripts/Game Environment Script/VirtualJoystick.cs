@@ -6,9 +6,8 @@ using System.Collections;
 public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointerDownHandler {
 
     private Image backgroundImg;
-    private Image joystickImg;
+    public Image joystickImg;
     private Vector3 inputVector;
-    private float playerAngle;
     private bool isDrag;
 
     public static VirtualJoystick currentJS;
@@ -20,20 +19,9 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
 
     private void Start()
     {
-        playerAngle = 0;
         isDrag = false;
         backgroundImg = GetComponent<Image>();
         joystickImg = transform.GetChild(0).GetComponent<Image>();
-    }
-
-    private void Update()
-    {
-        playerAngle = joystickImg.rectTransform.anchoredPosition.x;
-    }
-
-    public float RotatePlayer()
-    {
-        return playerAngle;
     }
 
     public virtual void OnDrag(PointerEventData ped)
