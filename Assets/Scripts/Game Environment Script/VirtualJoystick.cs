@@ -8,7 +8,6 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
     private Image backgroundImg;
     public Image joystickImg;
     private Vector3 inputVector;
-    private bool isDrag;
 
     public static VirtualJoystick currentJS;
 
@@ -19,7 +18,6 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
 
     private void Start()
     {
-        isDrag = false;
         backgroundImg = GetComponent<Image>();
         joystickImg = transform.GetChild(0).GetComponent<Image>();
     }
@@ -47,14 +45,12 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
     public virtual void OnPointerDown(PointerEventData ped)
     {
         OnDrag(ped);
-        isDrag = true;
     }
 
     public virtual void OnPointerUp(PointerEventData ped)
     {
         inputVector = Vector3.zero;
         joystickImg.rectTransform.anchoredPosition = Vector3.zero;
-        isDrag = false;
     }
 
     public float Horizontal()
