@@ -14,32 +14,9 @@ public class WeaponList : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
-        if (Input.GetKeyUp(KeyCode.Alpha1))
-        {
-            this.currentWeapon = 0;
-            this.SwitchWeapons();
-        }
-        else if (Input.GetKeyUp(KeyCode.Alpha2))
-        {
-            this.currentWeapon = 1;
-            this.SwitchWeapons();
-        }
-        else if (Input.GetKeyUp(KeyCode.Alpha3))
-        {
-            this.currentWeapon = 2;
-            this.SwitchWeapons();
-        }
-        else if (Input.GetKeyUp(KeyCode.Alpha4))
-        {
-            this.currentWeapon = 3;
-            this.SwitchWeapons();
-        }
-        else if (Input.GetKeyUp(KeyCode.Alpha5))
-        {
-            this.currentWeapon = 4;
-            this.SwitchWeapons();
-        }
+	void FixedUpdate () {
+        currentWeapon = WeaponSwitchingScript.currentSlot.currentEquipWeapon;
+        SwitchWeapons();
     }
 
     public void SwitchWeapons()

@@ -7,7 +7,7 @@ public class Pistol : WeaponController {
         
         this.time = this.coolDownTime;
 
-        UIController.current.weaponIcon.sprite = this.weaponIcon;
+        //UIController.current.weaponIcon.sprite = this.weaponIcon;
         UIController.current.weaponAmmo.text = this.currentAmmunition + " / " + this.maxAmmunition;
     }
 }

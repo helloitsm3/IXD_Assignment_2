@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class WeaponController : MonoBehaviour {
-    public Sprite weaponIcon;
+    //public Sprite weaponIcon;
     public Transform Spawner;
     public GameObject projectilePrfb;
     public int maxAmmunition;
@@ -16,7 +16,7 @@ public class WeaponController : MonoBehaviour {
     {
         if(UIController.current != null)
         {
-            UIController.current.weaponIcon.sprite = this.weaponIcon;
+           // UIController.current.weaponIcon.sprite = this.weaponIcon;
             UIController.current.weaponAmmo.text = this.currentAmmunition + " / " + this.maxAmmunition;
         }        
     }
