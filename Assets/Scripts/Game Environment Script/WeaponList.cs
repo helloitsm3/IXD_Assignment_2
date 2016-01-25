@@ -2,8 +2,14 @@
 
 public class WeaponList : MonoBehaviour {
     public WeaponController[] weaponsList;
+    public static WeaponList currentWeaponList;
     private int currentWeapon;
     ProjectileController projectiles;
+
+    void Awake()
+    {
+        currentWeaponList = this;
+    }
 
     // Use this for initialization
     void Start () {
